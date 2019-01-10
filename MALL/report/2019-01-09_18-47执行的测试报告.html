@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    
+    <link href=https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css rel=stylesheet>
+    <title> 登陆测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: Microsoft YaHei,Tahoma,arial,helvetica,sans-serif;padding: 20px; font-size: 125%; }
+table       { font-size: 125%; }
+
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        
+        tr.className = '';
+        if(level==0 && (id.substr(0,2)=='pt'||id.substr(0,2)=='ft')){
+          tr.className = 'hiddenRow';
+        }
+
+        if(level==1 && id.substr(0,2)=='pt'){
+          tr.className = 'hiddenRow';
+        }
+        if(level==2 && id.substr(0,2) == 'ft'){
+          tr.className = 'hiddenRow';
+        }
+        
+    
+        
+    }
+
+   
+}
+
+
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+function toggleBox(tid){
+    console.log(document.getElementById('div_'+tid));
+    
+    if(document.getElementById('div_'+tid).style.display=="none"){
+        document.getElementById('div_'+tid).style.display="block"
+    }else{
+        document.getElementById('div_'+tid).style.display="none"
+    }
+}
+
+function hideAll(){
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+    //console.log(trs[i])
+     id = trs[i].id;
+     if (id.substr(0,2) == 'pt'||id.substr(0,2) == 'ft' ) {
+        if(trs[i].style.display=="none"){
+         trs[i].style.display="table-row"
+        }else{
+         trs[i].style.display="none"
+        }
+     }
+    }
+    if( document.getElementById('c1').innerText=="详细"){
+        document.getElementById('c1').innerHTML="收起"
+    }else{
+        document.getElementById('c1').innerHTML="详细"
+    }
+    
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1> 登陆测试报告</h1>
+<p class='attribute'><strong>测试人员:</strong> Ethan</p>
+<p class='attribute'><strong>开始时间:</strong> 2019-01-09 18:47:15</p>
+<p class='attribute'><strong>合计耗时:</strong> 0:00:57.746143</p>
+<p class='attribute'><strong>测试结果:</strong> 共 3 条用例，通过 2 条，，失败 1 条，通过率= 66.67%</p>
+
+<p class='description'>你好这是Ethan的测试报告</p>
+</div>
+
+
+
+    <p id='show_detail_line'>
+    <a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 66.67% }</a>
+    <a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 1 }</a>
+    <a class="btn btn-success" href='javascript:showCase(2)'>通过{ 2 }</a>
+    <a class="btn btn-info" href='javascript:showCase(3)'>所有{ 3 }</a>
+    </p>
+    <table id='result_table' class="table table-condensed table-bordered table-hover">
+    <colgroup>
+    <col align='left' />
+    <col align='right' />
+    <col align='right' />
+    <col align='right' />
+    <col align='right' />
+    <col align='right' />
+    </colgroup>
+    <tr id='header_row' class="text-center success" style="font-weight: bold;font-size: 14px;">
+        <td>用例集</td>
+        <td>总计</td>
+        <td>通过</td>
+        <td>失败</td>
+        <td>错误</td>
+        <td>详细</td>
+    </tr>
+    
+<tr class='failClass warning'>
+    <td class="text-center"></td>
+    <td class="text-center">3</td>
+    <td class="text-center">2</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center"></td>
+</tr>
+
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_1_________________________________________Account_not_exists_____http___47_88_50_127_8061_login____None____账号密码为特殊字符__: Built-in mutable sequence.</div></td>
+    <td colspan='5' align='center'>
+
+     <!--Ĭ�����������Ϣ -Findyou
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse"  onclick="toggleBox('pt1_1')" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse">  -->
+    
+    <!-- Ĭ��չ��������Ϣ -Findyou -->
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse"  onclick="toggleBox('pt1_1')" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse in">
+    <pre>
+    
+pt1_1: ['Account not exists!', 'http://47.88.50.127:8061/login', 'None']
+
+
+    </pre>
+    </div>
+
+    </td>
+</tr>
+
+<tr id='pt1_2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_2___20190199_20190199____123456789____None____http___47_88_50_127_8061_refused_008699999999999____Thank_you_for_your_interest_in_becoming_an_LTS_dealer_partner_____账号为被拒绝账号__: Built-in mutable sequence.</div></td>
+    <td colspan='5' align='center'>
+
+     <!--Ĭ�����������Ϣ -Findyou
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse"  onclick="toggleBox('pt1_2')" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse">  -->
+    
+    <!-- Ĭ��չ��������Ϣ -Findyou -->
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse"  onclick="toggleBox('pt1_2')" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse in">
+    <pre>
+    
+pt1_2: ['None', 'http://47.88.50.127:8061/refused/008699999999999', 'Thank you for your interest in becoming an LTS dealer partner.']
+
+
+    </pre>
+    </div>
+
+    </td>
+</tr>
+
+<tr id='ft1_3' class='none'>
+    <td class='failCase'><div class='testcase'>test_add_3___20190198_20190198____123456789____None____http___47_88_50_127_8061_submitted_008699999999999____Your_application_for_LTS_Mall_new_account_is_still_in_progress_____账号为未被审核账号__: Built-in mutable sequence.</div></td>
+    <td colspan='5' align='center'>
+
+     <!--Ĭ�����������Ϣ -Findyou
+    <button id='btn_ft1_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse"  onclick="toggleBox('ft1_3')" data-target='#div_ft1_3'>失败</button>
+    <div id='div_ft1_3' class="collapse">  -->
+    
+    <!-- Ĭ��չ��������Ϣ -Findyou -->
+    <button id='btn_ft1_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse"  onclick="toggleBox('ft1_3')" data-target='#div_ft1_3'>失败</button>
+    <div id='div_ft1_3' class="collapse in">
+    <pre>
+    
+ft1_3: Traceback (most recent call last):
+  File "C:\Python37\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Ethan\MALL\case\fist_ddt_case.py", line 43, in test_add
+    self.assertEqual(data_massage[1], url)
+AssertionError: 'http://47.88.50.127:8061/home' != 'http://47.88.50.127:8061/submitted/008699999999999'
+- http://47.88.50.127:8061/home
++ http://47.88.50.127:8061/submitted/008699999999999
+
+['None', 'http://47.88.50.127:8061/home', 'None']
+
+
+    </pre>
+    </div>
+
+    </td>
+</tr>
+
+    <tr id='total_row' class="text-center active">
+        <td>总计</td>
+        <td>3</td>
+        <td>2</td>
+        <td>1</td>
+        <td>0</td>
+        <td>通过率66.67%</td>
+    </tr>
+    </table>
+
+<div id='ending'>&nbsp;</div>
+        <div style=" position:fixed;right:50px; bottom:30px; width:20px; height:20px;cursor:pointer">
+        <a href="#"><span class="glyphicon glyphicon-eject" style = "font-size:30px;" aria-hidden="true">
+        </span></a></div>
+        
+
+</body>
+</html>
